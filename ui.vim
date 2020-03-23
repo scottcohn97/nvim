@@ -26,7 +26,9 @@ set background=dark
 "    colorscheme desert
 "endif
 """"""""""""""""""""""""""" Nord settings""""""""""""""""""""""""""""""""
-colorscheme nord
+
+colorscheme wal
+set background = dark
 """"""""""""""""""""""""""" deus settings"""""""""""""""""""""""""""""""""
 " colorscheme deus
 
