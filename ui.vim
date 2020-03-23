@@ -25,7 +25,8 @@ set background=dark
 "else
 "    colorscheme desert
 "endif
-
+""""""""""""""""""""""""""" Nord settings""""""""""""""""""""""""""""""""
+colorscheme nord
 """"""""""""""""""""""""""" deus settings"""""""""""""""""""""""""""""""""
 " colorscheme deus
 
@@ -40,11 +41,11 @@ set background=dark
 " colorscheme one
 
 """""""""""""""""""""""""""material.vim settings""""""""""""""""""""""""""
-let g:material_terminal_italics = 1
+" let g:material_terminal_italics = 1
 "let g:material_theme_style = 'default' | 'palenight' | 'ocean' | 'lighter' |
 "'darker'
-let g:material_theme_style = 'default'
-colorscheme material
+"let g:material_theme_style = 'default'
+" colorscheme material
 
 """"""""""""""""""""""""""" badwolf settings """""""""""""""""""""""""""""
 " let g:badwolf_darkgutter = 0
