@@ -27,8 +27,7 @@ set background=dark
 "endif
 """"""""""""""""""""""""""" Nord settings""""""""""""""""""""""""""""""""
 
-colorscheme wal
-set background = dark
+colorscheme nord
 """"""""""""""""""""""""""" deus settings"""""""""""""""""""""""""""""""""
 " colorscheme deus
 

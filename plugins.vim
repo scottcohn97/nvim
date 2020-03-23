@@ -103,8 +103,7 @@ Plug 'srcery-colors/srcery-vim'
 " Plug 'whatyouhide/vim-gotham'
 " Plug 'rakr/vim-one'
 " Plug 'kaicataldo/material.vim'
-" Plug 'arcticicestudio/nord-vim'
-Plug 'dylanaraps/wal'
+Plug 'arcticicestudio/nord-vim'
 
 if !exists('g:started_by_firenvim')
     " colorful status line and theme
