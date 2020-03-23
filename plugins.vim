@@ -241,6 +241,8 @@ if g:is_win || g:is_mac
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] }
 endif
 
+" RMarkdown support 'https://github.com/vim-pandoc/vim-rmarkdown'
+Plug 'vim-pandoc/vim-rmarkdown'
 " emoji
 " Plug 'https://gitlab.com/gi1242/vim-emoji-ab'
 Plug 'fszymanski/deoplete-emoji', {'for': 'markdown'}
