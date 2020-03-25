@@ -27,7 +27,11 @@ set background=dark
 "endif
 """"""""""""""""""""""""""" Nord settings""""""""""""""""""""""""""""""""
 
-colorscheme nord
+"colorscheme nord
+
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+colorscheme OceanicNext
 """"""""""""""""""""""""""" deus settings"""""""""""""""""""""""""""""""""
 " colorscheme deus
 
