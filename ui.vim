@@ -25,13 +25,20 @@ set background=dark
 "else
 "    colorscheme desert
 "endif
-""""""""""""""""""""""""""" Nord settings""""""""""""""""""""""""""""""""
+"""""""""""""""""""" Oceanic Next  settings""""""""""""""""""""""""""
+if (has("termguicolors"))
+    set termguicolors
+endif
 
-"colorscheme nord
-
+syntax enable 
 let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
 colorscheme OceanicNext
+
+""""""""""""""""""""""""""" Nord settings """""""""""""""""""""""""""""""
+
+" colorscheme nord
+
 """"""""""""""""""""""""""" deus settings"""""""""""""""""""""""""""""""""
 " colorscheme deus
 

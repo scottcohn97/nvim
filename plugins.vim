@@ -103,8 +103,9 @@ Plug 'srcery-colors/srcery-vim'
 " Plug 'whatyouhide/vim-gotham'
 " Plug 'rakr/vim-one'
 " Plug 'kaicataldo/material.vim'
-Plug 'arcticicestudio/nord-vim'
-
+" Plug 'arcticicestudio/nord-vim'
+" Plug 'voronianski/oceanic-next-color-scheme'
+Plug 'mhartington/oceanic-next'
 if !exists('g:started_by_firenvim')
     " colorful status line and theme
     Plug 'vim-airline/vim-airline'
