@@ -39,13 +39,18 @@ call plug#begin(g:PLUGIN_HOME)
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Python source for deoplete
-Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+Plug 'zchee/deoplete-jedi'
 
 " Vim source for deoplete
 Plug 'Shougo/neco-vim', { 'for': 'vim' }
 
 " Insert mode completion
 Plug 'ervandew/supertab'
+
+" ncm-R
+Plug 'gaalcaras/ncm-R'
+Plug 'roxma/nvim-completion-manager'
+
 "}}
 
 "{{ Python-related plugins
@@ -58,6 +63,21 @@ Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 " Python indent (follows the PEP8 style)
 Plug 'Vimjas/vim-python-pep8-indent', {'for': 'python'}
 "}}
+
+"{{ R-related plugins
+
+" Nvim-R
+Plug 'jalvesaq/Nvim-R'
+
+Plug 'ncm2/ncm2'
+
+Plug 'roxma/nvim-yarp'
+
+" linting 
+Plug 'w0rp/ale'
+
+"}}
+
 
 "{{ Search related plugins
 " Super fast movement with vim-sneak
@@ -88,10 +108,17 @@ endif
 
 " A greping tool
 " Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
+
+" install plugin :: using vim-plug
+Plug 'rizzatti/dash.vim'
+
+" fzf 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 "}}
 
 "{{ UI: Color, theme etc.
-" A list of colorscheme plugin you may want to try. Find what suits you.
+" A list of colorscheme plugin
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'srcery-colors/srcery-vim'
 " Plug 'sjl/badwolf'
@@ -224,7 +251,7 @@ Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 Plug 'junegunn/limelight.vim', {'for': 'markdown'}
 
 " Markdown syntax highlighting
-Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': 'markdown' }
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " Another markdown plugin
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
@@ -244,6 +271,7 @@ if g:is_win || g:is_mac
 endif
 
 " RMarkdown support 'https://github.com/vim-pandoc/vim-rmarkdown'
+Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-rmarkdown'
 " emoji
 " Plug 'https://gitlab.com/gi1242/vim-emoji-ab'
@@ -409,6 +437,7 @@ let g:SuperTabDefaultCompletionType = '<c-n>'
 " see https://is.gd/AoSv4m
 let g:SuperTabMappingForward = '<tab>'
 let g:SuperTabMappingBackward = '<s-tab>'
+
 "}}
 
 "{{ Python-related
@@ -437,8 +466,23 @@ let g:semshi#mark_selected_nodes=0
 let g:semshi#error_sign=v:false
 "}}
 
+"{{ R-related
+" settings :: Nvim-R
+
+" R output is highlight with current colorscheme
+let g:rout_follow_colorscheme = 1
+
+" R commands in R output are highlighted
+let g:Rout_more_colors = 1
+"}}
 "{{ Search related
+
+"""""""""""""""""""""""""""""Dash"""""""""""""""""""""""""""""""""""""
+" remap search key
+nmap <silent> <leader>d <Plug>DashSearch<CR>
+
 """""""""""""""""""""""""""""vim-sneak settings"""""""""""""""""""""""
+
 " Use sneak label mode
 let g:sneak#label = 1
 
@@ -619,6 +663,12 @@ augroup END
 "}}
 
 "{{ Linting and formating
+"""""""""""""""""""""""""""""" lintr """"""""""""""""""""""""""""""
+
+" lintr
+let g:syntastic_enable_r_lintr_checker = 1
+let g:syntastic_r_checkers = ['lintr']
+
 """""""""""""""""""""""""""""" ale settings """""""""""""""""""""""
 " linters for different filetypes
 let g:ale_linters = {
@@ -704,6 +754,9 @@ nmap @@ <Plug>ReturnFromFootnote
 
 """"""""""""""""""""""""deoplete-emoji settings""""""""""""""""""""""""""""
 call deoplete#custom#source('emoji', 'converters', ['converter_emoji'])
+
+""""""""""""""""""""""""vim-pandoc settings""""""""""""""""""""""""""""""""
+" let g:rmd_syn_langs = ["r", "python"]
 "}}
 
 "{{ LaTeX editting

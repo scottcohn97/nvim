@@ -75,5 +75,5 @@ highlight Cursor2 guifg=red guibg=red
 " https://github.com/neovim/neovim/wiki/FAQ#how-to-change-cursor-color-in-the-terminal
 set guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor20
 "}}
-brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+"brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 "}
