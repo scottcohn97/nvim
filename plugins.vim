@@ -69,6 +69,8 @@ Plug 'Vimjas/vim-python-pep8-indent', {'for': 'python'}
 " Nvim-R
 Plug 'jalvesaq/Nvim-R'
 
+" based on ultisnips
+Plug 'ncm2/ncm2-ultisnips'
 Plug 'ncm2/ncm2'
 
 Plug 'roxma/nvim-yarp'
@@ -113,7 +115,7 @@ endif
 Plug 'rizzatti/dash.vim'
 
 " fzf 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf'
 
 "}}
 
