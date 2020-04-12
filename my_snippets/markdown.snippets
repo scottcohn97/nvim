@@ -18,11 +18,12 @@ endsnippet
 snippet "meta(data)?" "Markdown front matter in YAML format" br
 ---
 title: "$1"
+author: "$2"
 date: `!p from datetime import datetime
 if not snip.c:
 	snip.rv=datetime.now().strftime("%Y-%m-%d %H:%M:%S%z")`
-tags: [$2]
-categories: [$3]
+tags: [$3]
+categories: [$4]
 ---
 $0
 endsnippet
@@ -54,3 +55,43 @@ snippet detail "Clickable details" b
 $2
 </details>
 endsnippet
+
+# math
+
+snippet mk "Math" wA
+$${1}$`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+	snip.rv = ' '
+else:
+	snip.rv = ''
+`$2
+endsnippet
+
+snippet dm "Math" wA
+$$
+${1:${VISUAL}}
+.$$ $0
+endsnippet
+
+snippet ali "Align" bA
+\begin{align*}
+	${1:${VISUAL}}
+.\end{align*}
+endsnippet
+
+
+context "math()"
+snippet // "Fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
+
+snippet / "Fraction" i
+\\frac{${VISUAL}}{$1}$0
+endsnippet
+
+context "math()"
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "symbol frac" wrA
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+endsnippet
+
+

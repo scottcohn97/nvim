@@ -84,7 +84,6 @@ Plug 'w0rp/ale'
 
 " citation
 Plug 'jalvesaq/zotcite'
-Plug 'rafaqz/citation'
 
 "}}
 
@@ -143,7 +142,8 @@ Plug 'srcery-colors/srcery-vim'
 " Plug 'arcticicestudio/nord-vim'
 " Plug 'voronianski/oceanic-next-color-scheme'
 " Plug 'mhartington/oceanic-next'
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
+" Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'arzg/vim-colors-xcode'
 
 if !exists('g:started_by_firenvim')
     " colorful status line and theme
@@ -152,6 +152,7 @@ if !exists('g:started_by_firenvim')
     Plug 'mhinz/vim-startify'
 endif
 "}}
+
 
 "{{ Plugin to deal with URL
 " Highlight URLs inside vim

@@ -33,7 +33,7 @@ endif
 "syntax enable 
 "let g:oceanic_next_terminal_bold = 1
 "let g:oceanic_next_terminal_italic = 1
-"colorscheme OceanicNext
+" colorscheme OceanicNext
 
 """"""""""""""""""""""""""" Nord settings """""""""""""""""""""""""""""""
 
@@ -66,8 +66,19 @@ endif
 " colorscheme badwolf
 
 """"""""""""""""""""""""""" onehalfdark settings"""""""""""""""""""""""""
-colorscheme onehalfdark
-let g:airline_theme='onehalfdark'
+"colorscheme onehalfdark
+"let g:airline_theme='onehalfdark'
+
+"""""""""""""""""""""""""""vim-colors-xcode settings""""""""""""""""""""
+
+colorscheme xcodewwdc
+" colorscheme xcodedark
+
+let g:xcodewwdc_dim_punctuation = 1
+
+" not available in xcodewwdc 
+" let g:xcodedark_green_comments = 1
+
 "}}
 
 "{{ Cursor colors and shapes
