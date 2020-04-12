@@ -49,7 +49,6 @@ Plug 'ervandew/supertab'
 
 " ncm-R
 Plug 'gaalcaras/ncm-R'
-Plug 'roxma/nvim-completion-manager'
 
 "}}
 
