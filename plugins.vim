@@ -66,11 +66,16 @@ Plug 'Vimjas/vim-python-pep8-indent', {'for': 'python'}
 "{{ R-related plugins
 
 " Nvim-R
-Plug 'jalvesaq/Nvim-R'
+Plug 'jalvesaq/Nvim-R', { 'for' : 'r' } 
 
 " based on ultisnips
 Plug 'ncm2/ncm2-ultisnips'
 Plug 'ncm2/ncm2'
+
+" NOTE: you need to install completion sources to get completions. Check
+" our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
 
 Plug 'roxma/nvim-yarp'
 
@@ -133,7 +138,9 @@ Plug 'srcery-colors/srcery-vim'
 " Plug 'kaicataldo/material.vim'
 " Plug 'arcticicestudio/nord-vim'
 " Plug 'voronianski/oceanic-next-color-scheme'
-Plug 'mhartington/oceanic-next'
+" Plug 'mhartington/oceanic-next'
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
+
 if !exists('g:started_by_firenvim')
     " colorful status line and theme
     Plug 'vim-airline/vim-airline'
@@ -475,6 +482,15 @@ let g:rout_follow_colorscheme = 1
 
 " R commands in R output are highlighted
 let g:Rout_more_colors = 1
+
+""""""""""""""""""""""""""" ncm2 settings """""""""""""""""""""""""""""""
+" enable ncm2 for all buffers
+autocmd BufEnter * call ncm2#enable_for_buffer()
+
+" IMPORTANT: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
+
+
 "}}
 "{{ Search related
 

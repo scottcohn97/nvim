@@ -30,10 +30,10 @@ if (has("termguicolors"))
     set termguicolors
 endif
 
-syntax enable 
-let g:oceanic_next_terminal_bold = 1
-let g:oceanic_next_terminal_italic = 1
-colorscheme OceanicNext
+"syntax enable 
+"let g:oceanic_next_terminal_bold = 1
+"let g:oceanic_next_terminal_italic = 1
+"colorscheme OceanicNext
 
 """"""""""""""""""""""""""" Nord settings """""""""""""""""""""""""""""""
 
@@ -64,6 +64,10 @@ colorscheme OceanicNext
 " " Make the tab line lighter than the background.
 " let g:badwolf_tabline = 2
 " colorscheme badwolf
+
+""""""""""""""""""""""""""" onehalfdark settings"""""""""""""""""""""""""
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
 "}}
 
 "{{ Cursor colors and shapes
