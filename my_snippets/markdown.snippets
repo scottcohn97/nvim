@@ -15,10 +15,6 @@ snippet kbd "HTML kbd tag"
 <kbd>${1:KEY}</kbd>$0
 endsnippet
 
-snippet more "HTML more tag"
-<!--more-->
-endsnippet
-
 snippet img "Aligned image using HTML tag"
 <p align="center">
 <img src="${1:URL}" width="400">
@@ -28,11 +24,6 @@ endsnippet
 
 snippet link "Markdown links"
 [$1]($2)$0
-endsnippet
-
-post_jump "gen_header(snip)"
-snippet "h([1-6])" "Markdown header" br
-`!p snip.rv = match.group(1)`
 endsnippet
 
 snippet detail "Clickable details" b
