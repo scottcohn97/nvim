@@ -1,0 +1,64 @@
+extends markdown
+extends sh
+extends r
+
+###########################################################################
+#                          SNIPPETS for RMARKDOWN                          #
+###########################################################################
+snippet rc "R code"
+\`\`\`\{r ${1:`!v expand("%:t:r")`_${2:Title}}\}
+${0:${VISUAL}}
+\`\`\`
+endsnippet
+
+snippet python "include python script sourcecode"
+\`\`\`\{r, echo=F, cache=FALSE}
+read_chunk('$1.py', labels = '$1')
+\`\`\`
+\`\`\`\{r $1, engine='${2:python}', eval=FALSE, cache=FALSE\}
+\`\`\`
+endsnippet
+
+snippet julia "include julia code" !b
+\`\`\`\{r ${3:`!v expand("%:t:r")`_${1:Title},} engine='julia'\}
+${0:${VISUAL}}
+\`\`\`
+endsnippet
+snippet gg2
+[ggplot2][]
+endsnippet
+
+snippet ggv
+[ggvis][]
+endsnippet
+
+snippet "meta(data)?" "Markdown front matter in YAML format" br
+---
+title: "$1"
+author: "Scott Cohn"
+date: `!p from datetime import datetime
+if not snip.c:
+	snip.rv=datetime.now().strftime("%Y-%m-%d %H:%M:%S%z")`
+summary: "$2"
+output: 
+    html_document:
+        theme: flatly
+        highlight: haddock
+        toc: yes
+        toc_depth: 4
+        toc_float: no 
+        keep_md: yes
+---
+$0
+endsnippet
+
+snippet start "Markdown front matter in YAML format" 
+\`\`\`\{r setup, include = FALSE\}
+# knitr::opt_chunk$set(include = FALSE)
+library(tidyverse)
+library(ggplot2)
+\`\`\`
+$0
+endsnippet
+
+

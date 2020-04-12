@@ -769,15 +769,13 @@ let g:vim_markdown_json_frontmatter = 1  " for JSON format
 let g:vim_markdown_toc_autofit = 1
 
 """""""""""""""""""""""""markdown-preview settings"""""""""""""""""""
-" Only setting this for suitable platforms
-if g:is_win || g:is_mac
-    " Do not close the preview tab when switching to other buffers
-    let g:mkdp_auto_close = 0
+" Set default browser 
+let g:mkdp_browser = 'Google Chrome'
 
-    " Shortcuts to start and stop markdown previewing
-    nnoremap <silent> <M-m> :MarkdownPreview<CR>
-    nnoremap <silent> <M-S-m> :MarkdownPreviewStop<CR>
-endif
+" Shortcuts for :Markdown[command] 
+nmap <C-s> <Plug>MarkdownPreview
+nmap <M-s> <Plug>MarkdownPreviewStop
+nmap <C-p> <Plug>MarkdownPreviewToggle
 
 """"""""""""""""""""""""vim-markdownfootnotes settings""""""""""""""""""""""""
 " Replace the default mappings provided by the plugin
