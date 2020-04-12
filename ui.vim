@@ -53,11 +53,11 @@ endif
 " colorscheme one
 
 """""""""""""""""""""""""""material.vim settings""""""""""""""""""""""""""
-" let g:material_terminal_italics = 1
+let g:material_terminal_italics = 1
 "let g:material_theme_style = 'default' | 'palenight' | 'ocean' | 'lighter' |
 "'darker'
-"let g:material_theme_style = 'default'
-" colorscheme material
+let g:material_theme_style = 'default'
+colorscheme material
 
 """"""""""""""""""""""""""" badwolf settings """""""""""""""""""""""""""""
 " let g:badwolf_darkgutter = 0
@@ -71,10 +71,10 @@ endif
 
 """""""""""""""""""""""""""vim-colors-xcode settings""""""""""""""""""""
 
-colorscheme xcodewwdc
+" colorscheme xcodewwdc
 " colorscheme xcodedark
 
-let g:xcodewwdc_dim_punctuation = 1
+" let g:xcodewwdc_dim_punctuation = 1
 
 " not available in xcodewwdc 
 " let g:xcodedark_green_comments = 1

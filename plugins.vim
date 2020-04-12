@@ -128,8 +128,8 @@ Plug 'junegunn/fzf'
 
 "{{ UI: Color, theme etc.
 " A list of colorscheme plugin
-Plug 'lifepillar/vim-gruvbox8'
-Plug 'srcery-colors/srcery-vim'
+" Plug 'lifepillar/vim-gruvbox8'
+" Plug 'srcery-colors/srcery-vim'
 " Plug 'sjl/badwolf'
 " Plug 'ajmwagar/vim-deus'
 " Plug 'sainnhe/vim-color-desert-night'
@@ -138,7 +138,7 @@ Plug 'srcery-colors/srcery-vim'
 " Plug 'sickill/vim-monokai'
 " Plug 'whatyouhide/vim-gotham'
 " Plug 'rakr/vim-one'
-" Plug 'kaicataldo/material.vim'
+Plug 'kaicataldo/material.vim'
 " Plug 'arcticicestudio/nord-vim'
 " Plug 'voronianski/oceanic-next-color-scheme'
 " Plug 'mhartington/oceanic-next'
@@ -875,16 +875,18 @@ endif
 "{{ UI: Status line, look
 """""""""""""""""""""""""""vim-airline setting""""""""""""""""""""""""""""""
 " Set airline theme to a random one if it exists
-let s:candidate_airlinetheme = ['ayu_mirage', 'base16_flat',
-    \ 'base16_grayscale', 'lucius', 'hybridline', 'ayu_dark',
-    \ 'base16_adwaita', 'biogoo', 'distinguished', 'jellybeans',
-    \ 'luna', 'raven', 'term', 'vice', 'zenburn']
-let s:idx = utils#RandInt(0, len(s:candidate_airlinetheme)-1)
-let s:theme = s:candidate_airlinetheme[s:idx]
+"let s:candidate_airlinetheme = ['ayu_mirage', 'base16_flat',
+"    \ 'base16_grayscale', 'lucius', 'hybridline', 'ayu_dark',
+"    \ 'base16_adwaita', 'biogoo', 'distinguished', 'jellybeans',
+"   \ 'luna', 'raven', 'term', 'vice', 'zenburn']
+"let s:idx = utils#RandInt(0, len(s:candidate_airlinetheme)-1)
+"let s:theme = s:candidate_airlinetheme[s:idx]
 
-if utils#HasAirlinetheme(s:theme)
-    let g:airline_theme=s:theme
-endif
+let g:airline_theme = 'material'
+
+"if utils#HasAirlinetheme(s:theme)
+"    let g:airline_theme=s:theme
+"endif
 
 " Tabline settings
 let g:airline#extensions#tabline#enabled = 1
