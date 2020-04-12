@@ -82,6 +82,10 @@ Plug 'roxma/nvim-yarp'
 " linting 
 Plug 'w0rp/ale'
 
+" citation
+Plug 'jalvesaq/zotcite'
+Plug 'rafaqz/citation'
+
 "}}
 
 
@@ -482,6 +486,18 @@ let g:rout_follow_colorscheme = 1
 
 " R commands in R output are highlighted
 let g:Rout_more_colors = 1
+
+" R comment 
+let R_comment_string = '# '
+
+" R PDF viewer 
+let R_pdfviewer = "Skim"
+
+" R html
+let R_openhtml = 1
+
+" R highlight functions
+let R_hi_fun_paren = 1
 
 """"""""""""""""""""""""""" ncm2 settings """""""""""""""""""""""""""""""
 " enable ncm2 for all buffers
