@@ -61,6 +61,9 @@ Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 
 " Python indent (follows the PEP8 style)
 Plug 'Vimjas/vim-python-pep8-indent', {'for': 'python'}
+
+" Provides text obj and motions for classes/methods/funcs/docstrings 
+Plug 'jeetsukumaran/vim-pythonsense'
 "}}
 
 "{{ R-related plugins
@@ -231,7 +234,7 @@ if g:is_mac
 endif
 "}}
 
-"{{ Linting, formating
+"{{ Linting, formatting
 " Syntax check and make
 " Plug 'neomake/neomake'
 
@@ -296,14 +299,14 @@ Plug 'fszymanski/deoplete-emoji', {'for': 'markdown'}
 " carefully to use its full power
 Plug 'wellle/targets.vim'
 
-" Plugin to manipulate characer pairs quickly
+" Plugin to manipulate character pairs quickly
 Plug 'tpope/vim-surround'
 
 " Add indent object for vim (useful for languages like Python)
 Plug 'michaeljsmith/vim-indent-object'
 "}}
 
-"{{ LaTeX editting and previewing plugin
+"{{ LaTeX editing and previewing plugin
 " Only use these plugin on Windows and Mac and when LaTeX is installed
 if ( g:is_win || g:is_mac ) && executable('latex')
     " vimtex use autoload feature of Vim, so it is not necessary to use `for`
@@ -382,7 +385,7 @@ call utils#Cabbrev('pc', 'PlugClean')
 
 "{{ Auto-completion related
 """""""""""""""""""""""""""" deoplete settings""""""""""""""""""""""""""
-" Wheter to enable deoplete automatically after start nvim
+" Whether to enable deoplete automatically after start nvim
 let g:deoplete#enable_at_startup = 1
 
 " Maximum candidate window width

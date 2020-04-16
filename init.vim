@@ -14,20 +14,13 @@
 
 "{ Header and Licence
 "{{ header info
-" Description: This is my Neovim configuration which supports Mac, Linux and
-" Windows, with various plugins configured. This configuration evolves as I
-" learn more about Nvim and becomes more proficient in using Nvim. Since it is
-" very long (more than 1000 lines!), you should read it carefully and
-" take only the settings and options which suits you. I would not recommend
-" downloading this file and replace your own init.vim. Good configurations are
-" built over time and take your time to polish.
-" Author: Jie-dong Hao
-" Email: jdhao@hotmail.com
+" Description: This is my Neovim configuration." Author: Scott Cohn
+" Email: scott97kc@gmail.com
 "}}
 
 "{{ License: MIT License
 "
-" Copyright (c) 2018 Jie-dong Hao
+" Copyright (c) 2020 Scott Cohn
 "
 " Permission is hereby granted, free of charge, to any person obtaining a copy
 " of this software and associated documentation files (the "Software"), to
